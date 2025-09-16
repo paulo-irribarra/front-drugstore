@@ -1,0 +1,86 @@
+/* Main calculator container */
+.calculator {
+  background-color: #2c3e50;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  width: 350px; /* Increased width */
+  margin: 20px auto;
+}
+
+/* Display screen */
+.display {
+  background-color: #34495e;
+  border-radius: 8px;
+  color: #ecf0f1;
+  font-size: 2.5rem; /* Larger font */
+  padding: 20px 15px; /* More padding */
+  text-align: right;
+  margin-bottom: 25px;
+  min-height: 80px; /* Taller display */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px; /* Slightly larger gap */
+}
+
+/* Base button style */
+.btn {
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem; /* Larger font */
+  padding: 20px 0; /* More padding */
+  transition: all 0.2s ease;
+}
+
+/* Operator buttons */
+.operator {
+  background-color: #e67e22;
+}
+
+/* Hover effects */
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Clear button */
+.btn:nth-child(1) {
+  background-color: #e74c3c;
+}
+
+/* Equal button */
+.btn:nth-last-child(2) {
+  background-color: #2ecc71;
+  grid-column: span 2;
+}
+
+/* Zero button */
+.btn:nth-last-child(3) {
+  grid-column: span 2;
+}
+
+/* Body styling for full viewport */
+body {
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
