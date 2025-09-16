@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicamentos - Centralización Farmacéutica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/medicamentos.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="nav-left">
+                <div class="brand-logo">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="medicamentos.html" style="font-weight: bold; text-decoration: underline;">Medicamentos</a>
+                </div>
+            </div>
+            <div class="auth-links">
+                <a href="#">Login</a>
+                <a href="#">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Catálogo de Medicamentos</h1>
+        
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar medicamento por nombre, principio activo...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <select id="categoria-filter">
+                        <option value="">Todas las categorías</option>
+                        <option value="analgesico">Analgésico</option>
+                        <option value="antibiotico">Antibiótico</option>
+                        <option value="antiinflamatorio">Antiinflamatorio</option>
+                        <option value="cardiovascular">Cardiovascular</option>
+                        <option value="dermatologico">Dermatológico</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <select id="laboratorio-filter">
+                        <option value="">Todos los laboratorios</option>
+                        <option value="pfizer">Pfizer</option>
+                        <option value="roche">Roche</option>
+                        <option value="bayer">Bayer</option>
+                        <option value="novartis">Novartis</option>
+                        <option value="merck">Merck</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <select id="stock-filter">
+                        <option value="">Todo el stock</option>
+                        <option value="high">Stock Alto</option>
+                        <option value="medium">Stock Medio</option>
+                        <option value="low">Stock Bajo</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="medicamentos-list" id="medicamentos-container">
+            <!-- Medicamentos will be populated here by JavaScript -->
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <button id="prev-page">&laquo; Anterior</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button id="next-page">Siguiente &raquo;</button>
+        </div>
+    </main>
+
+    <script src="js/medicamentos.js"></script>
+</body>
+</html>
